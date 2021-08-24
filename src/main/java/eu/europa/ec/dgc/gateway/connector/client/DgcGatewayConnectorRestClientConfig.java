@@ -66,7 +66,10 @@ public class DgcGatewayConnectorRestClientConfig {
             .setSSLContext(getSslContext())
             .setDefaultHeaders(Arrays.asList(
                 new BasicHeader("Accept-Encoding", "gzip, deflate, br"),
-                new BasicHeader("Connection", "keep-alive")
+                new BasicHeader("Connection", "keep-alive"),
+                new BasicHeader("X-SSL-Client-SHA256",
+                        "592592c82b57fd4a2b153928c38cc87628aec2eba3189baec7cba122e7b9e0ec"),
+                new BasicHeader("X-SSL-Client-DN", "C=TH")
             ))
             .setSSLHostnameVerifier(new DefaultHostnameVerifier())
             .setProxy(getProxy())
